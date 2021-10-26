@@ -1,0 +1,110 @@
+<div class="container contentBox mt-lg-5">
+  <div class="boxCard">
+    <mat-card>
+      <div class="img d-flex align-items-center justify-content-center mt-2 imglogin">
+        <img src="assets/Logouser.png" alt="">
+      </div>
+
+      <form class="example-form">
+
+        <div class="row">
+          <div class="col-lg-6">
+            <mat-form-field class="example-full-width" appearance="outline">
+              <mat-label>Prénom</mat-label>
+              <mat-icon matSuffix>person</mat-icon>
+              <input matInput>
+            </mat-form-field>
+          </div>
+          <div class="col-lg-6">
+            <mat-form-field class="example-full-width" appearance="outline">
+              <mat-label>Nom</mat-label>
+              <mat-icon matSuffix>person</mat-icon>
+              <input matInput>
+            </mat-form-field>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6">
+            <mat-form-field class="example-full-width" appearance="outline">
+              <mat-label>email</mat-label>
+              <mat-icon matSuffix>markunread</mat-icon>
+              <input matInput>
+            </mat-form-field>
+          </div>
+          <div class="col-lg-6">
+            <mat-form-field class="example-full-width" appearance="outline">
+              <mat-label>Entreprise</mat-label>
+              <mat-icon matSuffix>villa</mat-icon>
+              <input matInput>
+            </mat-form-field>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6">
+            <mat-form-field class="example-full-width" appearance="outline">
+              <mat-label>Genre</mat-label>
+              <mat-icon matSuffix>male</mat-icon>
+              <input matInput>
+            </mat-form-field>
+          </div>
+          <div class="col-lg-6">
+            <mat-form-field class="example-full-width" appearance="outline">
+              <mat-label>Téléphone</mat-label>
+              <mat-icon matSuffix>smartphone</mat-icon>
+              <input matInput>
+            </mat-form-field>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6">
+            <mat-form-field class="example-full-width" appearance="outline">
+              <mat-label>Adresse</mat-label>
+              <mat-icon matSuffix>home</mat-icon>
+              <input matInput>
+            </mat-form-field>
+          </div>
+          <div class="col-lg-6">
+            <!-- <mat-form-field class="example-full-width" appearance="outline">
+              <mat-label>Photo</mat-label>
+              <mat-icon matSuffix>person</mat-icon>
+              <input  type="file" matInput>
+            </mat-form-field> -->
+            <button type="button" mat-raised-button (click)="fileInput.click()">Photo</button>
+            <input hidden (change)="onFileSelected()" #fileInput type="file" id="file">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6">
+            <!--input password -->
+            <mat-form-field class="example-full-width" appearance="outline">
+              <mat-label>Mot de passe</mat-label>
+              <input matInput [type]="hide ? 'password' : 'text'">
+              <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                [attr.aria-pressed]="hide">
+                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+              </button>
+            </mat-form-field>
+          </div>
+          <div class="col-lg-6">
+            <!--input password -->
+            <mat-form-field class="example-full-width" appearance="outline">
+              <mat-label>Confirmer mot de passe</mat-label>
+              <input matInput [type]="hide ? 'password' : 'text'">
+              <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                [attr.aria-pressed]="hide">
+                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+              </button>
+            </mat-form-field>
+          </div>
+        </div>
+        <button type="button" class="btn btn-success btnform">S'inscrire</button>
+      </form>
+
+    </mat-card>
+  </div>
+
+</div>

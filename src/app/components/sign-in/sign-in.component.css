@@ -1,0 +1,29 @@
+.imglogin img{
+  width: 150px;
+  height: 150px;
+
+}
+
+.example-full-width {
+  width:100%;
+  margin: 0 auto;
+}
+
+form.example-form.ng-untouched.ng-pristine.ng-valid {
+  margin: 0 60px;
+}
+
+section.ftco-section {
+  background: #ececec;
+}
+
+section.example-section a {
+  float: right;
+  text-decoration: none;
+  color: #000;
+}
+
+.boxCard{
+  width: 50%;
+  margin: 0 auto;
+}
