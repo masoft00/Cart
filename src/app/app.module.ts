@@ -19,6 +19,7 @@ import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { ScrollToTopComponent } from './components/scroll-to-top/scroll-to-top.component';
 import { ProductsComponent } from './components/products/products.component';
 import { AdminPanelComponent } from './components/admin-panel/admin-panel.component';
+import { DetailProductComponent } from './components/detail-product/detail-product.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { AdminPanelComponent } from './components/admin-panel/admin-panel.compon
     SignUpComponent,
     ScrollToTopComponent,
     ProductsComponent,
-    AdminPanelComponent
+    AdminPanelComponent,
+    DetailProductComponent
   ],
   imports: [
     BrowserModule,
