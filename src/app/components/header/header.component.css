@@ -19,6 +19,14 @@
   color: #000 !important;
   background:#ffc805 !important;
 }
+.header.shop .nice-select .list li:hover {
+  background: #0f0f0e !important;
+  color: #fff;
+}
+
+
+
+
 .navbar-expand-lg .navbar-nav .nav-link {
   padding-right: 0.5rem;
   padding-left: 4rem;

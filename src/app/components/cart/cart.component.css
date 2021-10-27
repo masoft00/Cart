@@ -64,23 +64,23 @@
 }
 
 .cf14-title-design .design-process {
-  background-color: #f6bc44;
+  background-color: #ffc805;
   padding: 10px 20px;
   text-align: center;
   margin: 0 0 0 auto;
 }
 
 .shopping-summery thead {
-  background: #f6bc44;
+  background: #ffc805;
   color: #fff;
 }
 
 #scrollUp i:hover {
-  background: #f6bc44;
+  background: #ffc805;
 }
 
 .shopping-summery tbody tr {
-  border-bottom: 1px solid #f6bc44;
+  border-bottom: 1px solid #ffc805;
   margin-top: 20px;
 }
 
