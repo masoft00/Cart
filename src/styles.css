@@ -40,3 +40,8 @@ button.btn.btnform:focus {
   border-color: #f6bc44 !important;
   box-shadow: none !important;
 }
+
+
+input[type="text"],input[type="password"]{
+border: none !important;
+}
