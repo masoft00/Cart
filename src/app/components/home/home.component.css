@@ -1,5 +1,4 @@
 .sectionBanner .contentWrappper .bannerTitle {
-  font-family: "Odudo Bold";
   font-weight: 700;
   text-transform: uppercase;
   max-width: 595 px;
@@ -93,7 +92,6 @@ a:active, a:focus, a:hover {
 }
 
 .sectionTitle {
-  font-family: "Odudo Bold";
   color: #000;
   text-transform: uppercase;
   font-weight: 700;
@@ -103,7 +101,6 @@ a:active, a:focus, a:hover {
 
 .sectionSubtitle {
   color: #f7bc44;
-  font-family: "Odudo Semi Bold";
   font-weight: 600;
   font-size: 28px;
   line-height: 30px;
@@ -115,7 +112,6 @@ a:active, a:focus, a:hover {
 }
 
 .sectionWhyUs .rowWrapper .contentWrapper .title {
-  font-family: "Odudo Semi Bold";
   font-weight: 600;
   font-size: 21px;
   margin: 30px 0 25px;

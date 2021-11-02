@@ -1,40 +1,61 @@
-<div class="container contentBox mt-lg-5">
-  <div class="boxCard">
-    <mat-card>
-      <div class="img d-flex align-items-center justify-content-center mt-2 imglogin">
-        <img src="assets/userLoginImg.jpg" alt="">
+<div class="content">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 order-md-2">
+        <img src="assets/undraw_file_sync_ot38.svg" alt="Image" class="img-fluid">
       </div>
-      <!-- <h3 class="text-center mb-0 mt-8">Login</h3> -->
-      <form class="example-form">
-        <!--input username -->
-        <mat-form-field class="example-full-width" appearance="outline">
-          <mat-label>Username</mat-label>
-          <mat-icon matSuffix>person</mat-icon>
-          <input matInput>
-        </mat-form-field>
+      <div class="col-md-6 contents">
+        <div class="row justify-content-center">
+          <div class="col-md-8">
+            <div class="mb-4">
+            <h3> <strong>Se connecter</strong></h3>
+            <p class="mb-4">Lorem ipsum dolor sit amet elit. Sapiente sit aut eos consectetur adipisicing.</p>
+          </div>
+          <form action="#" method="post">
+            <div class="form-group first">
+              <label for="username">Username</label>
+              <input type="text" class="form-control" id="username">
 
-        <!--input password -->
-        <mat-form-field class="example-full-width" appearance="outline">
-          <mat-label>Password</mat-label>
-          <input matInput [type]="hide ? 'password' : 'text'">
-          <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
-            [attr.aria-pressed]="hide">
-            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-          </button>
-        </mat-form-field>
+            </div>
+            <div class="form-group last mb-4">
+              <label for="password">Password</label>
+              <input type="password" class="form-control" id="password">
 
-        <section class="example-section">
-          <mat-checkbox class="example-margin">Remember Me</mat-checkbox>
-          <span class="forgetpassword align-right"><a href="">Forgot Password</a></span>
-        </section>
-        <button type="button" class="btn btn-success btnform">S'inscrire</button>
-      </form>
-      <div class="w-100 text-center text">
-        <p class="mb-0">Don't have an account?</p>
-        <a href="/signUp">Sign Up</a>
+            </div>
+
+            <div class="d-flex mb-5 align-items-center">
+              <label class="control control--checkbox mb-0"><span class="caption">se souvenir de moi</span>
+                <input type="checkbox" checked="checked"/>
+                <div class="control__indicator"></div>
+              </label>
+              <span class="ml-auto"><a href="#" class="forgot-pass">Mot de passe oublié</a></span>
+            </div>
+
+            <input type="submit" value="Se connecter" class="btn text-white btn-block btn-primary bg-black">
+
+            <span class="d-block text-left my-4 text-muted"> <a href="/signUp">S'inscrire</a> </span>
+            <span class="d-block text-left my-4 text-muted"> Ou se connecter avec</span>
+
+            <div class="social-login">
+              <a href="#" class="facebook">
+                <span class="icon-facebook mr-3"></span>
+              </a>
+              <a href="#" class="twitter">
+                <span class="icon-twitter mr-3"></span>
+              </a>
+              <a href="#" class="google">
+                <span class="icon-google mr-3"></span>
+              </a>
+              <a href="#" class="linkedin">
+                <span class="icon-linkedin mr-3"></span>
+              </a>
+            </div>
+          </form>
+          </div>
+        </div>
+
       </div>
 
-    </mat-card>
+    </div>
   </div>
-
 </div>
