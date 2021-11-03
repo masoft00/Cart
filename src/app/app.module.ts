@@ -20,6 +20,7 @@ import { ScrollToTopComponent } from './components/scroll-to-top/scroll-to-top.c
 import { ProductsComponent } from './components/products/products.component';
 import { AdminPanelComponent } from './components/admin-panel/admin-panel.component';
 import { DetailProductComponent } from './components/detail-product/detail-product.component';
+import { CompatibilityComponent } from './components/compatibility/compatibility.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { DetailProductComponent } from './components/detail-product/detail-produ
     ScrollToTopComponent,
     ProductsComponent,
     AdminPanelComponent,
-    DetailProductComponent
+    DetailProductComponent,
+    CompatibilityComponent
   ],
   imports: [
     BrowserModule,
