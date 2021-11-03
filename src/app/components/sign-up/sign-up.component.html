@@ -9,7 +9,7 @@
               <p class="mb-4">Lorem ipsum dolor sit amet elit. Sapiente sit aut eos consectetur adipisicing.</p>
             </div>
 
-            <form action="#" method="post">
+            <form>
               <div class="row">
                 <div class="form-group first col-lg-6 col-sm-6 col-md-12">
                   <label for="nom">Nom</label>
@@ -18,6 +18,25 @@
                 <div class="form-group first col-lg-6 col-sm-6 col-md-12">
                   <label for="prenom">Prénom</label>
                   <input type="text" class="form-control" id="prenom">
+                </div>
+              </div>
+
+              <div class="row genres">
+                <label class="firstlabel">Genre</label>
+                <div class="genre col-lg-6 col-sm-6 col-md-12">
+                  <div>
+                    <input type="radio" id="homme" name="genre" value="homme" checked>
+                    <label for="homme">Homme</label>
+                  </div>
+                  <div>
+                    <input type="radio" id="femme" name="genre" value="femme">
+                    <label for="femme">Femme</label>
+                  </div>
+                </div>
+
+                <div class="form-group first col-lg-6 col-sm-6 col-md-12">
+                  <label for="telephone">Téléohone</label>
+                  <input type="tel" class="form-control" id="telephone">
                 </div>
               </div>
 
@@ -32,13 +51,39 @@
                 </div>
               </div>
 
+              <div class="row">
+                <div class="form-group first col-lg-6 col-sm-6 col-md-12">
+                  <label for="adresse">Adresse</label>
+                  <input type="text" class="form-control" id="adresse">
+                </div>
 
-              <div class="form-group last mb-4">
-                <label for="password">Password</label>
-                <input type="password" class="form-control" id="password">
+                <div class="form-group first col-lg-6 col-sm-6 col-md-12">
+                  <label for="photo">Photo</label>
+                  <input type="file" class="form-control" id="photo">
+                </div>
               </div>
-              <input type="submit col-lg-6 col-sm-6 col-md-16" value="Se connecter"
-                class="btn text-white btn-block btn-primary bg-black">
+
+              <div class="row">
+                <label for="test">Réseaux sociaux</label>
+                <div class="form-group first col-lg-12 col-sm-12 col-md-12">
+                  <textarea id="w3review" name="w3review" rows="4" cols="50"></textarea>
+                </div>
+
+              </div>
+
+              <div class="row">
+                <div class="form-group first col-lg-6 col-sm-6 col-md-12">
+                  <label for="password">Mot de passe</label>
+                  <input type="password" class="form-control" id="password">
+                </div>
+                <div class="form-group first col-lg-6 col-sm-6 col-md-12">
+                  <label for="confpassword">Confirmer mot de passe</label>
+                  <input type="text" class="form-control" id="confpassword">
+                </div>
+              </div>
+
+              <input type="submit" class="SubmitConnexion col-lg-6 col-sm-6 col-md-16" value="S'inscrire"
+                class="btn text-white btn-primary bg-black">
               <span class="d-block text-left my-4 text-muted"> Ou s'inscrire avec</span>
               <div class="social-login">
                 <a href="#" class="facebook">

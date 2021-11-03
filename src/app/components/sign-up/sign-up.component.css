@@ -1,5 +1,3 @@
-
-
 p {
   color: #000 !important;
   font-weight: 300;
@@ -266,4 +264,31 @@ h2 {
 .control--checkbox input:disabled:checked~.control__indicator {
   background-color: #7e0cf5;
   opacity: .2;
+}
+
+input.SubmitConnexion {
+  height: 54px;
+  width: 15% !important;
+}
+
+.genre.col-lg-6.col-sm-6.col-md-12 {
+  padding-top: 15px;
+}
+
+.row.genres .firstlabel {
+  font-size: 12px;
+}
+
+.genre.col-lg-6.col-sm-6.col-md-12 {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+input#photo {
+  font-size: 12px;
+}
+
+textarea {
+  width: 100%;
+  background: #ececec;
 }

@@ -1,9 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
+html, body {
+  height: 100%;
+}
 
-
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -13,17 +14,17 @@ body {
   background: #ececec;
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
- }
+}
 
-a.nav-link.active{
-  color:#f6bc44 !important;
+a.nav-link.active {
+  color: #f6bc44 !important;
 }
 
 body a {
   text-decoration: none !important;
 }
 
-footer{
+footer {
   background: #000 !important;
   width: 100%;
 }
@@ -45,7 +46,11 @@ button.btn.btnform:focus {
   box-shadow: none !important;
 }
 
+input[type="text"], input[type="password"] {
+  border: none !important;
+}
 
-input[type="text"],input[type="password"]{
-border: none !important;
+.social-login a {
+  height: 40px !important;
+  width: 40px !important;
 }
