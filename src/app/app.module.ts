@@ -29,7 +29,9 @@ import { HappyCustomersComponent } from './components/happy-customers/happy-cust
 import { GraphQLModule } from './graphql.module';
 
 
-// Firebase
+// Firebase services + enviorment module
+
+
 
 
 @NgModule({
@@ -55,23 +57,10 @@ import { GraphQLModule } from './graphql.module';
     FormsModule,
     HttpClientModule,
     MaterialModule,
-    ReactiveFormsModule,
     GraphQLModule,
+    ReactiveFormsModule
   ],
-  providers: [
-    {
-      provide: APOLLO_OPTIONS,
-      useFactory: (httpLink: HttpLink) => {
-        return {
-          cache: new InMemoryCache(),
-          link: httpLink.create({
-            uri: 'http://localhost:3000/admin/api',
-          }),
-        };
-      },
-      deps: [HttpLink],
-    },
-  ],
+  providers: [],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
