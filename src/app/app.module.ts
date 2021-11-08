@@ -1,6 +1,10 @@
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import {APOLLO_OPTIONS} from 'apollo-angular';
+import {HttpLink} from 'apollo-angular/http';
+import {InMemoryCache} from '@apollo/client/core';
+
 
 /* Angular Material */
 import { MaterialModule } from './material/angular-material.module';
@@ -21,6 +25,12 @@ import { ProductsComponent } from './components/products/products.component';
 import { AdminPanelComponent } from './components/admin-panel/admin-panel.component';
 import { DetailProductComponent } from './components/detail-product/detail-product.component';
 import { CompatibilityComponent } from './components/compatibility/compatibility.component';
+import { HappyCustomersComponent } from './components/happy-customers/happy-customers.component';
+import { GraphQLModule } from './graphql.module';
+
+
+// Firebase
+
 
 @NgModule({
   declarations: [
@@ -35,7 +45,8 @@ import { CompatibilityComponent } from './components/compatibility/compatibility
     ProductsComponent,
     AdminPanelComponent,
     DetailProductComponent,
-    CompatibilityComponent
+    CompatibilityComponent,
+    HappyCustomersComponent
   ],
   imports: [
     BrowserModule,
@@ -45,9 +56,22 @@ import { CompatibilityComponent } from './components/compatibility/compatibility
     HttpClientModule,
     MaterialModule,
     ReactiveFormsModule,
-
+    GraphQLModule,
   ],
-  providers: [],
+  providers: [
+    {
+      provide: APOLLO_OPTIONS,
+      useFactory: (httpLink: HttpLink) => {
+        return {
+          cache: new InMemoryCache(),
+          link: httpLink.create({
+            uri: 'http://localhost:3000/admin/api',
+          }),
+        };
+      },
+      deps: [HttpLink],
+    },
+  ],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })

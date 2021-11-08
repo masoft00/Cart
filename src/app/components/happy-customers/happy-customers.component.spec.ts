@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CompatibilityComponent } from './compatibility.component';
+import { HappyCustomersComponent } from './happy-customers.component';
 
-describe('CompatibilityComponent', () => {
-  let component: CompatibilityComponent;
-  let fixture: ComponentFixture<CompatibilityComponent>;
+describe('HappyCustomersComponent', () => {
+  let component: HappyCustomersComponent;
+  let fixture: ComponentFixture<HappyCustomersComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CompatibilityComponent ]
+      declarations: [ HappyCustomersComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(CompatibilityComponent);
+    fixture = TestBed.createComponent(HappyCustomersComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

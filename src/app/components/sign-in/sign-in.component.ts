@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
+import {Apollo, gql} from 'apollo-angular';
 
 @Component({
   selector: 'app-sign-in',
@@ -8,12 +9,38 @@ import { Title } from '@angular/platform-browser';
 })
 export class SignInComponent implements OnInit {
   hide = true;
-  constructor(private titleService:Title) {
+
+  users!: any[];
+  loading = true;
+  error: any;
+
+
+  constructor(
+    private titleService:Title,
+    private apollo: Apollo
+    ) {
     this.titleService.setTitle("SignIn");
    }
 
 
-  ngOnInit(): void {
+   ngOnInit() {
+    this.apollo
+      .watchQuery({
+        query: gql`
+          {
+            rates(currency: "USD") {
+              currency
+              rate
+            }
+          }
+        `,
+      })
+      .valueChanges.subscribe((result: any) => {
+        this.users = result?.data?.users;
+        this.loading = result.loading;
+        this.error = result.error;
+      });
   }
+
 
 }
