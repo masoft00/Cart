@@ -58,20 +58,7 @@ import { GraphQLModule } from './graphql.module';
     ReactiveFormsModule,
     GraphQLModule,
   ],
-  providers: [
-    {
-      provide: APOLLO_OPTIONS,
-      useFactory: (httpLink: HttpLink) => {
-        return {
-          cache: new InMemoryCache(),
-          link: httpLink.create({
-            uri: 'http://localhost:3000/admin/api',
-          }),
-        };
-      },
-      deps: [HttpLink],
-    },
-  ],
+  providers: [],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
