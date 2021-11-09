@@ -29,10 +29,7 @@ import { HappyCustomersComponent } from './components/happy-customers/happy-cust
 import { GraphQLModule } from './graphql.module';
 
 
-// Firebase services + enviorment module
-
-
-
+// Firebase
 
 @NgModule({
   declarations: [
@@ -57,8 +54,8 @@ import { GraphQLModule } from './graphql.module';
     FormsModule,
     HttpClientModule,
     MaterialModule,
+    ReactiveFormsModule,
     GraphQLModule,
-    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent],
