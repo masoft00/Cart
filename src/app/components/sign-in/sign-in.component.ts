@@ -1,46 +1,33 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
+import { AuthService } from './../../shared/auth/auth.service';
 import { Title } from '@angular/platform-browser';
-import {Apollo, gql} from 'apollo-angular';
 
 @Component({
   selector: 'app-sign-in',
   templateUrl: './sign-in.component.html',
-  styleUrls: ['./sign-in.component.css']
+  styleUrls: ['./sign-in.component.css'],
 })
 export class SignInComponent implements OnInit {
-  hide = true;
-
-  users!: any[];
-  loading = true;
-  error: any;
-
+  signinForm: FormGroup;
 
   constructor(
-    private titleService:Title,
-    private apollo: Apollo
-    ) {
-    this.titleService.setTitle("SignIn");
-   }
-
-
-   ngOnInit() {
-    this.apollo
-      .watchQuery({
-        query: gql`
-          {
-            rates(currency: "USD") {
-              currency
-              rate
-            }
-          }
-        `,
-      })
-      .valueChanges.subscribe((result: any) => {
-        this.users = result?.data?.users;
-        this.loading = result.loading;
-        this.error = result.error;
-      });
+    private titleService: Title,
+    public fb: FormBuilder,
+    public authService: AuthService,
+    public router: Router
+  ) {
+    this.titleService.setTitle('SignIn');
+      (this.signinForm = this.fb.group({
+        email: [''],
+        password: [''],
+      }));
   }
 
+  ngOnInit(): void {}
 
+  loginUser() {
+    this.authService.signIn(this.signinForm.value);
+  }
 }

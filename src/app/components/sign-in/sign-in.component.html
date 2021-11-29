@@ -11,15 +11,15 @@
             <h3> <strong>Se connecter</strong></h3>
             <p class="mb-4">Lorem ipsum dolor sit amet elit. Sapiente sit aut eos consectetur adipisicing.</p>
           </div>
-          <form action="#" method="post">
+          <form [formGroup]="signinForm" (ngSubmit)="loginUser()">
             <div class="form-group first">
-              <label for="username">Username</label>
-              <input type="text" class="form-control" id="username">
+              <label for="email">Email</label>
+              <input type="email" class="form-control" formControlName="email" id="email">
 
             </div>
             <div class="form-group last mb-4">
               <label for="password">Password</label>
-              <input type="password" class="form-control" id="password">
+              <input type="password" class="form-control" formControlName="password" id="password">
 
             </div>
 
@@ -32,9 +32,9 @@
             </div>
 
             <input type="submit" value="Se connecter" class="btn text-white btn-block btn-primary bg-black">
-
+            <!-- <button type="submit" class="btn text-white btn-block btn-primary bg-black">Se connecter</button> -->
             <span class="d-block text-left my-4 text-muted"> <a href="/signUp">S'inscrire</a> </span>
-            <span class="d-block text-left my-4 text-muted"> Ou se connecter avec</span>
+            <!-- <span class="d-block text-left my-4 text-muted"> Ou se connecter avec</span>
 
             <div class="social-login">
               <a href="#" class="facebook">
@@ -49,7 +49,7 @@
               <a href="#" class="linkedin">
                 <span class="icon-linkedin mr-3"></span>
               </a>
-            </div>
+            </div> -->
           </form>
           </div>
         </div>
