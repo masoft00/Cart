@@ -52,6 +52,17 @@
                   <label for="adresse">Adresse</label>
                   <input type="text" class="form-control" id="adresse" />
                 </div>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <label class="input-group-text" for="inputGroupSelect01">Type
+                      de carte</label>
+                  </div>
+                  <select class="custom-select" id="inputGroupSelect01">
+                    <option *ngFor="let item of resulallcard"
+                      value="{{item._id}}">{{item.name}}</option>
+                  </select>
+                </div>
+
 
                 <div class="form-group first col-lg-6 col-sm-6 col-md-12">
                   <label for="photo">Photo</label>
@@ -66,8 +77,7 @@
                     id="w3review"
                     name="w3review"
                     rows="4"
-                    cols="50"
-                  ></textarea>
+                    cols="50"></textarea>
                 </div>
               </div>
 
@@ -87,7 +97,7 @@
                 class="SubmitConnexion col-lg-6 col-sm-6 col-md-16"
                 value="S'inscrire"
                 class="btn text-white btn-primary bg-black"
-              />
+                />
               <!-- <span class="d-block text-left my-4 text-muted"> Ou s'inscrire avec</span>
               <div class="social-login">
                 <a href="#" class="facebook">
