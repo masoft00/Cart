@@ -23,6 +23,7 @@ import { GraphQLModule } from './graphql.module';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { UserProfilComponent } from './components/user-profil/user-profil.component';
 import { HomeAdminPanelComponent } from './components/admin-panel/home-admin-panel/home-admin-panel.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 
 @NgModule({
@@ -40,7 +41,8 @@ import { HomeAdminPanelComponent } from './components/admin-panel/home-admin-pan
     CompatibilityComponent,
     HappyCustomersComponent,
     UserProfilComponent,
-    HomeAdminPanelComponent
+    HomeAdminPanelComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,

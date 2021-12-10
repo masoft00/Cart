@@ -15,13 +15,14 @@ import { UserProfilComponent } from './components/user-profil/user-profil.compon
 import { AuthGuard } from "./shared/auth/auth.guard";
 
 
+
 const routes: Routes = [
-  { path: '', pathMatch             : 'full', redirectTo: '/home' },
-  { path: 'home', component         : HomeComponent },
-  { path: 'signIn', component       : SignInComponent },
-  { path: 'signUp', component       : SignUpComponent },
-  { path: 'cart', component         : CartComponent },
-  { path: 'products', component     : ProductsComponent },
+  { path: '', pathMatch: 'full', redirectTo: '/home' },
+  { path: 'home', component: HomeComponent },
+  { path: 'signIn', component: SignInComponent },
+  { path: 'signUp', component: SignUpComponent },
+  { path: 'cart', component: CartComponent },
+  { path: 'products', component: ProductsComponent },
   { path: 'admin-panel-home', component: HomeAdminPanelComponent },
   { path: 'user-profile/:id', component: UserProfilComponent, canActivate: [AuthGuard] },
   { path: 'detailProduct', component: DetailProductComponent },
