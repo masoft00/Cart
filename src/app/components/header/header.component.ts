@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import {CompatibilityComponent} from '../compatibility/compatibility.component';
-import { AuthService } from '../../shared/auth/auth.service';
+import {CompatibilityComponent} from '../compatibility/compatibility.component'
 
 @Component({
   selector: 'app-header',
@@ -10,13 +9,8 @@ import { AuthService } from '../../shared/auth/auth.service';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor(
-    public authService: AuthService,
-    public dialog: MatDialog
-    ) { }
-  logout() {
-    this.authService.doLogout()
-  }
+  constructor(public dialog: MatDialog) {}
+
   openDialog() {
     const dialogRef = this.dialog.open(CompatibilityComponent);
 

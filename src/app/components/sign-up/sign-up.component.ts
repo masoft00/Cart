@@ -1,7 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { Title } from '@angular/platform-browser';
-import { AuthService } from 'src/app/shared/services/auth.service';
-
 @Component({
   selector: 'app-sign-up',
   templateUrl: './sign-up.component.html',
@@ -9,13 +7,11 @@ import { AuthService } from 'src/app/shared/services/auth.service';
 })
 export class SignUpComponent implements OnInit {
   files = [];
-  resulallcard: any;
 
   hide = true;
   srcResult: any;
   constructor(
-    private titleService: Title,
-    private service: AuthService
+    private titleService: Title
   ) {
     this.titleService.setTitle('SignUp');
   }
@@ -34,15 +30,5 @@ export class SignUpComponent implements OnInit {
     }
   }
 
-  ngOnInit(): void {
-    this.getallmytypecard();
-  }
-
-  getallmytypecard() {
-    this.service.getcardtype().subscribe(data => {
-      this.resulallcard = data
-      console.log(this.resulallcard);
-
-    })
-  }
+  ngOnInit(): void {}
 }

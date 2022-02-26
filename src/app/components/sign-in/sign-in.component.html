@@ -2,47 +2,39 @@
   <div class="container">
     <div class="row">
       <div class="col-md-6 order-md-2">
-        <img src="assets/undraw_file_sync_ot38.svg" alt="Image"
-          class="img-fluid">
+        <img src="assets/undraw_file_sync_ot38.svg" alt="Image" class="img-fluid">
       </div>
       <div class="col-md-6 contents">
         <div class="row justify-content-center">
           <div class="col-md-8">
             <div class="mb-4">
-              <h3> <strong>Se connecter</strong></h3>
-              <p class="mb-4">Lorem ipsum dolor sit amet elit. Sapiente sit aut
-                eos consectetur adipisicing.</p>
+            <h3> <strong>Se connecter</strong></h3>
+            <p class="mb-4">Lorem ipsum dolor sit amet elit. Sapiente sit aut eos consectetur adipisicing.</p>
+          </div>
+          <form action="#" method="post">
+            <div class="form-group first">
+              <label for="username">Username</label>
+              <input type="text" class="form-control" id="username">
+
             </div>
-            <form [formGroup]="signinForm" (ngSubmit)="loginUser()">
-              <div class="form-group first">
-                <label for="email">Email</label>
-                <input type="email" class="form-control" formControlName="email"
-                  id="email">
+            <div class="form-group last mb-4">
+              <label for="password">Password</label>
+              <input type="password" class="form-control" id="password">
 
-              </div>
-              <div class="form-group last mb-4">
-                <label for="password">Password</label>
-                <input type="password" class="form-control"
-                  formControlName="password" id="password">
+            </div>
 
-              </div>
+            <div class="d-flex mb-5 align-items-center">
+              <label class="control control--checkbox mb-0"><span class="caption">se souvenir de moi</span>
+                <input type="checkbox" checked="checked"/>
+                <div class="control__indicator"></div>
+              </label>
+              <span class="ml-auto"><a href="#" class="forgot-pass">Mot de passe oublié</a></span>
+            </div>
 
-              <div class="d-flex mb-5 align-items-center">
-                <label class="control control--checkbox mb-0"><span
-                    class="caption">se souvenir de moi</span>
-                  <input type="checkbox" checked="checked" />
-                  <div class="control__indicator"></div>
-                </label>
-                <span class="ml-auto"><a href="#" class="forgot-pass">Mot de
-                    passe oublié</a></span>
-              </div>
+            <input type="submit" value="Se connecter" class="btn text-white btn-block btn-primary bg-black">
 
-              <input type="submit" value="Se connecter" class="btn text-white
-                btn-block btn-primary bg-black">
-              <!-- <button type="submit" class="btn text-white btn-block btn-primary bg-black">Se connecter</button> -->
-              <span class="d-block text-left my-4 text-muted"> <a
-                  routerLink="signUp">S'inscrire</a> </span>
-              <!-- <span class="d-block text-left my-4 text-muted"> Ou se connecter avec</span>
+            <span class="d-block text-left my-4 text-muted"> <a href="/signUp">S'inscrire</a> </span>
+            <span class="d-block text-left my-4 text-muted"> Ou se connecter avec</span>
 
             <div class="social-login">
               <a href="#" class="facebook">
@@ -57,8 +49,8 @@
               <a href="#" class="linkedin">
                 <span class="icon-linkedin mr-3"></span>
               </a>
-            </div> -->
-            </form>
+            </div>
+          </form>
           </div>
         </div>
 

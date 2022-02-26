@@ -30,9 +30,8 @@
               <li><i class="ti-location-pin"></i> Almadies lot 106 Résidende Kastelle
               </li>
               <li><i class="ti-alarm-clock"></i> <a href="#">24h/24h</a></li>
-              <li><i class="ti-user"></i> <a [routerLink]="['user-profile/id']">Mon compte</a></li>
-              <li *ngIf="!this.authService.isLoggedIn"><i class="ti-power-off"></i><a [routerLink]="['signIn']">Se connecter</a></li>
-              <li *ngIf="this.authService.isLoggedIn" ><i class="ti-power-off"></i><a (click)="logout()">Se deconnecter</a></li>
+              <li><i class="ti-user"></i> <a href="#">Mon compte</a></li>
+              <li><i class="ti-power-off"></i><a [routerLink]="['signIn']">Se connecter</a></li>
             </ul>
           </div>
           <!-- End Top Right -->
@@ -146,10 +145,10 @@
                 <div class="navbar-collapse">
                   <div class="nav-inner">
                     <ul class="nav main-menu menu navbar-nav">
-                      <li [routerLinkActive]="['active']"><a [routerLink]="['home']">ACCUEIL</a></li>
-                      <li [routerLinkActive]="['active']"><a [routerLink]="['products']">PRODUITS</a></li>
-                      <li [routerLinkActive]="['active']"><a (click)="openDialog()" >LISTE DE COMPATIBILITÉ</a></li>
-                      <li [routerLinkActive]="['active']"><a [routerLink]="['happyCustomer']">CLIENTS SATISFAITS</a></li>
+                      <li [routerLinkActive]="['active']"><a [routerLink]="['home']">HOME</a></li>
+                      <li [routerLinkActive]="['active']"><a [routerLink]="['products']">PRODUCT</a></li>
+                      <li [routerLinkActive]="['active']"><a (click)="openDialog()" >COMPATIBILITY LIST</a></li>
+                      <li [routerLinkActive]="['active']"><a [routerLink]="['happyCustomer']">HAPPY CUSTOMERS</a></li>
                     </ul>
                   </div>
                 </div>
